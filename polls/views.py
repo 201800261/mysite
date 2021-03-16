@@ -54,6 +54,7 @@ def vote(request, question_id):
         # user hits the Back button.
         return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
 
+#This function is used for reseting the votes
 def reset(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
     try:
