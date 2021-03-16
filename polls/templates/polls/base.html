@@ -1,0 +1,21 @@
+<html>
+	<head>
+		{% load static %}
+		<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
+		<title>Polls V1.0</title>
+	</head>
+		<body>
+			<div class="border">
+				<h1>Polls V1.0</h1>
+				
+					{% block mainbody%}
+					Empty Block!
+					{%endblock%}
+				
+				<div class="link">
+					<a href="{% url 'polls:index' %}">Go Back</a><hr>
+				</div>
+				<address>Created by DBAA Class @ March 12, 2021</address>
+			</div>
+		</body>
+</html>
