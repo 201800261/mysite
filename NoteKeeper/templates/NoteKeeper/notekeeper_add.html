@@ -1,0 +1,8 @@
+{% block notes%}
+	<form method="POST" action="{% url 'NoteKeeper:create' %}">
+		{% csrf_token %}
+		{{form.as_p}}
+		<input type="submit" value='Save'>
+	</form>
+{% endblock%}
+			

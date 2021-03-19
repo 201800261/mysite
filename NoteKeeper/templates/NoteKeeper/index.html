@@ -1,0 +1,21 @@
+{% block notes %}
+	{% if NoteList %}
+		{% for object in NoteList %} 
+		<ol>
+			<li> 	<a href="{% url 'NoteKeeper:detail' object.title %}">{{ object.title }}  </a></li>
+		</ol>
+	
+		
+
+	
+		
+		{% empty %} 
+		<p>Add Notes</p> 
+		{% endfor %}
+		<hr/> 
+		<a href="{% url 'NoteKeeper:create' %}">add</a> 
+	{% endif %}
+{% endblock %}
+	
+
+
