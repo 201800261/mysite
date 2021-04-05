@@ -1,12 +1,14 @@
-{% block notes %}
+{% extends "NoteKeeper/base.html" %}
+{% block main %}
+<h4 class="center grey-text">Notes</h4>
+	<div class="container">
+		<div class="row">
 	{% if NoteList %}
 		{% for object in NoteList %} 
 		<ol>
 			<li> 	<a href="{% url 'NoteKeeper:detail' object.title %}">{{ object.title }}  </a></li>
 		</ol>
 	
-		
-
 	
 		
 		{% empty %} 
@@ -15,6 +17,8 @@
 		<hr/> 
 		<a href="{% url 'NoteKeeper:create' %}">add</a> 
 	{% endif %}
+		</div>
+	</div>
 {% endblock %}
 	
 

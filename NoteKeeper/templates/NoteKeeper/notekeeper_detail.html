@@ -2,15 +2,18 @@
 {% block main %}
 
 {% if notes %}
-<h1>Title: {{ notes.title}}</h1>
-<p>Published Date: {{ notes.pub_date}}</p>
-<p>Update Date: {{notes.mod_date}}</p>
-<p>Content: {{ notes.content}}</p>
-{% endif %}
+<div class="container center">
+    <h4>Title: {{ notes.title}}</h4>
+    <p>Published Date: {{ notes.pub_date}}</p>
+    <p>Update Date: {{notes.mod_date}}</p>
+    <p>Content: {{ notes.content}}</p>
+    {% endif %}
 
 
-<a  href="{% url 'NoteKeeper:update' notes.title %}">Update</a> </br>
-<a  href="{% url 'NoteKeeper:delete' notes.title %}">Delete</a>
+
+    <a  href="{% url 'NoteKeeper:update' notes.title %}">Update</a> </br>
+    <a  href="{% url 'NoteKeeper:delete' notes.title %}">Delete</a>
+</div>
 {% endblock %}
 
 

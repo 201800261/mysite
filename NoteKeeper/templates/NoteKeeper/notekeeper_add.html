@@ -1,3 +1,4 @@
+{% extends "NoteKeeper/base.html" %}
 {% block notes%}
 	<form method="POST" action="{% url 'NoteKeeper:create' %}">
 		{% csrf_token %}
